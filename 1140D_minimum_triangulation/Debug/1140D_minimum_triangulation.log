@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1140d_minimum_triangulation\source.cpp(11): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'll'
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1140d_minimum_triangulation\source.cpp(11): note: consider using '%llu' in the format string
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1140d_minimum_triangulation\source.cpp(11): note: consider using '%I64u' in the format string
+  1140D_minimum_triangulation.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\1140D_minimum_triangulation.exe

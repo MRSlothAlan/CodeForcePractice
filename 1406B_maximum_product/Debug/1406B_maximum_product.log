@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1406b_maximum_product\source.cpp(22): warning C4477: 'scanf' : format string '%lld' requires an argument of type '__int64 *', but variadic argument 1 has type 'long *'
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1406b_maximum_product\source.cpp(22): note: consider using '%ld' in the format string
+  1406B_maximum_product.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\1406B_maximum_product.exe

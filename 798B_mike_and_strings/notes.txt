@@ -1,0 +1,193 @@
+﻿sample solution:
+
+# include <bits/stdc++.h>
+using namespace std;
+# define fi cin
+# define fo cout
+string s[512];
+int dp[512][512];
+
+{
+	int n;
+	fi>>n;
+	for (int i = 1;i <= n;++i)
+		fi>>s[i];
+	int k = s[1].length();
+	for (int i = 1;i <= n;++i)
+		for (int j = 0;j < k;++j)
+			dp[i][j] = 1e9;
+	for (int i = 1;i <= n;++i)
+		s[i] = s[i] + s[i];
+	for (int i = 0;i < k;++i)
+		dp[1][i] = i;
+	for (int i = 2;i <= n;++i)
+	{
+		for (int j = 0;j < k;++j)
+			for (int prev = 0;prev < k;++prev)
+				if (s[i].substr(j,k) == s[i-1].substr(prev,k))
+					dp[i][j] = min(dp[i][j],dp[i-1][prev] + j);
+	}
+	int ans = 1e9;
+	for (int i = 0;i < k;++i)
+		ans = min(ans,dp[n][i]);
+	if (ans == 1e9)
+		puts("-1");
+	else
+		fo << ans << '\n';
+}
+
+
+
+
+// my previous solution,
+// wrong answer at case 90 damn it.
+
+#pragma warning(disable : 4996)
+#include <cstdio>
+#include <cstring>
+/*
+one move : choose a string s.
+remove the first character, and append it to the end of the string.
+no solution, print -1.
+*/
+const int MAX = 120;
+char s[MAX][MAX], ref[MAX];
+int dp[MAX], match[MAX];
+int ref_len;
+
+int find_match(int i, int ref_len, int s_len) {
+	// find the matching index of the string.
+		// if any string has different len, -1.
+	int st = 0, str_pt = 0, tmp_rec = -1;
+	for (; st < ref_len && ref[st] != s[i][0]; st++) {}
+	while (str_pt < s_len && st < ref_len) {
+		if (s[i][str_pt] == ref[st]) {
+			if (str_pt == 0) {
+				tmp_rec = st;
+			}
+			st++;
+			str_pt++;
+		}
+		else if (s[i][str_pt] != ref[st]) {
+			// jump directly to the next starting point for searching?
+			str_pt = 0;
+			st = dp[tmp_rec];
+			if (st == -1)
+				break;
+		}
+	}
+	if (str_pt >= s_len) {
+		return tmp_rec;
+	}
+	else {
+		return -1;
+	}
+}
+/*
+
+Problem of this code: cannot handle duplicated substrings
+that well.
+solution: let different strings be the scale.
+or, a legit DP solution.
+wrong answer at test case 90, damn.
+
+*/
+
+void set_ref_dp(int idx, int s_len) {
+	strcpy(ref, s[idx]);
+	for (int i = s_len; i < 2 * s_len; i++) {
+		ref[i] = ref[i - s_len];
+	}
+	ref_len = strlen(ref);
+	memset(dp, -1, sizeof(dp));
+	for (int i = 0; i < ref_len; i++) {
+		if (dp[i] == -1) { // look for indices.
+			char cur_char = ref[i]; int tmp_prev_idx = i;
+			for (int j = i + 1; j < ref_len; j++) {
+				if (ref[j] == cur_char) {
+					dp[tmp_prev_idx] = j;
+					tmp_prev_idx = j;
+				}
+			}
+		}
+	}
+}
+
+int main() {
+	int operations = 0;
+	int n; scanf("%d", &n);
+	scanf("%s", &s[0]);
+	int s_len = strlen(s[0]);
+	set_ref_dp(0, s_len);
+	
+	bool valid = true;
+	for (int i = 1; i < n; i++) {
+		scanf("%s", &s[i]);
+	}
+	// pre-calculate all match-idx first.
+	for (int i = 0; i < n && valid; i++) {
+		match[i] = find_match(i, ref_len, s_len);
+		if (match[i] == -1) { valid = false; break; }
+	}
+	if (!valid) {
+		printf("-1");
+	}
+	else {
+		int min_cnt = 1e7, tmp_cnt = 0;
+		for (int start = 0; start < n; start++) {
+			// too time consuming.
+			/*
+			if (start > 0) {
+				set_ref_dp(start, s_len);
+				for (int i = 0; i < n && valid; i++) {
+					match[i] = find_match(i, ref_len, s_len);
+				}
+			}*/
+			tmp_cnt = 0;
+			for (int end = 0; end < n; end++) {
+				int val = match[start] - match[end];
+				if (val < 0) {
+					tmp_cnt += s_len + val;
+				}
+				else {
+					tmp_cnt += val;
+				}
+			}
+			if (tmp_cnt < min_cnt) {
+				min_cnt = tmp_cnt;
+			}
+		}
+		printf("%d", min_cnt);
+	}
+	return 0;
+}
+
+/*
+5
+asdja
+djaas
+jaasd
+jaass
+ssaaj
+*/
+/*
+4
+xzzwo
+zwoxz
+zzwox
+xzzwo
+*/
+
+/*
+First of all, you must notice that the operation of removing the first character 
+and appending it to the left is equivalent to cyclically shifting the string one position to the left.
+
+Let's denote by dpi, j the smallest number of operations for 
+making the first i strings equal to string si moved j times.
+
+Let f(i, j) be the the string si moved j times,then .
+
+The answer is min(dpn, 0, dpn, 1, ..., dpn, |sn| - 1).
+
+The complexity is O(|S|3 × n).
+*/

@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\798b_mike_and_strings\source.cpp(25): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\798b_mike_and_strings\source.cpp(49): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  798B_mike_and_strings.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\798B_mike_and_strings.exe

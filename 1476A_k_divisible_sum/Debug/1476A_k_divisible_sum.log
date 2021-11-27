@@ -1,0 +1,7 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1476a_k_divisible_sum\source.cpp(10): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type '__int64 *'
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1476a_k_divisible_sum\source.cpp(10): note: consider using '%lld' in the format string
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1476a_k_divisible_sum\source.cpp(10): note: consider using '%I64d' in the format string
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1476a_k_divisible_sum\source.cpp(22): warning C4244: 'initializing': conversion from 'double' to '__int64', possible loss of data
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1476a_k_divisible_sum\source.cpp(23): warning C4244: '=': conversion from 'double' to '__int64', possible loss of data
+  1476A_k_divisible_sum.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\1476A_k_divisible_sum.exe

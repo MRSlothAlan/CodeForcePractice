@@ -1,0 +1,7 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1539c_stable_groups\source.cpp(36): warning C4244: 'argument': conversion from 'lld' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  1539C_stable_groups.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\1539C_stable_groups.exe

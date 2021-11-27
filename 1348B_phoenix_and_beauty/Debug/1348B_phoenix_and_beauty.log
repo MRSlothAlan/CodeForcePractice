@@ -1,0 +1,12 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(22): warning C4244: 'argument': conversion from 'lld' to 'const int', possible loss of data
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(24): warning C4018: '>': signed/unsigned mismatch
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(32): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'lld'
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(32): note: consider using '%lld' in the format string
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(32): note: consider using '%I64d' in the format string
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(34): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'lld'
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(34): note: consider using '%lld' in the format string
+  c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(34): note: consider using '%I64d' in the format string
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(48): warning C4018: '<': signed/unsigned mismatch
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1348b_phoenix_and_beauty\source.cpp(54): warning C4018: '<': signed/unsigned mismatch
+  1348B_phoenix_and_beauty.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\1348B_phoenix_and_beauty.exe

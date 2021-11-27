@@ -23,6 +23,7 @@
     <ProjectGuid>{46981734-BB5E-4360-9B6B-5A386DD20DB8}</ProjectGuid>
     <RootNamespace>C1Potionseasy</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>1526C1_Potions_easy</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

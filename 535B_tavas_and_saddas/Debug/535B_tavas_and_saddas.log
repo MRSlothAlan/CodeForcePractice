@@ -1,0 +1,3 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\535b_tavas_and_saddas\source.cpp(29): warning C4244: '+=': conversion from 'double' to 'lld', possible loss of data
+  535B_tavas_and_saddas.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\535B_tavas_and_saddas.exe

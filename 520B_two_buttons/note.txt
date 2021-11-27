@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+ 
+ 
+typedef long long ll;
+ 
+ll n, m;
+vector<int> ans;
+const int MAX_N = 10000000;
+ 
+vector<int> graph[MAX_N];
+bool vis[MAX_N];
+bool vis_graph[MAX_N];
+queue<ll> q;
+ll dist[MAX_N];
+ 
+void extend_graph(ll x){
+	if(x != m && x > 0 && !vis_graph[x]){
+		vis_graph[x] = true;
+		graph[x].push_back(x-1);
+		graph[x].push_back(2*x);
+		if(x < m)
+			extend_graph(2*x);
+		extend_graph(x-1);
+	}
+}
+ 
+void bfs(int x){
+	vis[x] = true;
+	q.push(x);
+	while(!q.empty()){
+		int front = q.front();
+		q.pop();
+		for(auto ne:graph[front]){
+			if(!vis[ne]){
+				vis[ne] = true;
+				dist[ne] = dist[front] + 1;
+				q.push(ne);
+			}
+		}
+	}
+}
+ 
+int main(){
+ 
+	cin>>n>>m;
+	if(n == m){
+		cout<<0<<endl;
+		exit(0);
+	}
+	extend_graph(n);
+	bfs(n);
+	cout<<dist[m]<<endl;
+}

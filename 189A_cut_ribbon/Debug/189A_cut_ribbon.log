@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\189a_cut_ribbon\source.cpp(17): warning C4101: 'a': unreferenced local variable
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\189a_cut_ribbon\source.cpp(17): warning C4101: 'b': unreferenced local variable
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\189a_cut_ribbon\source.cpp(17): warning C4101: 'c': unreferenced local variable
+  189A_cut_ribbon.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\189A_cut_ribbon.exe

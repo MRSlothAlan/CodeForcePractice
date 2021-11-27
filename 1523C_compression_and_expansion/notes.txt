@@ -1,0 +1,68 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<stack>
+#include<string>
+#include<list>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	int t;
+	cin >> t;
+	for (int T = 0; T < t; T++){
+		string ans = "1.";
+		int n, a;
+		cin >> n;
+		stack<int> sta;
+		sta.push(1);
+		for (int i = 0; i < n; i++){
+			cin >> a;
+			while (1){
+				int b = sta.top();
+				sta.pop();
+				ans.pop_back();
+				while (ans.size() && ans.back() != '.'){
+					ans.pop_back();
+				}
+				if (b != a){
+					b = sta.top();
+					sta.pop();
+					ans.pop_back();
+					while (ans.size() && ans.back() != '.'){
+						ans.pop_back();
+					}
+					list<char> as;
+					sta.push(++b);
+					as.push_front('.');
+					while (b){
+						as.push_front('0' + b % 10);
+						b /= 10;
+					}
+					for (const char& j : as){
+						ans.push_back(j);
+					}
+					continue;
+				}
+				cout << ans << a << '\n';
+				list<char> as;
+				sta.push(b);
+				as.push_front('.');
+				while (b){
+					as.push_front('0' + b % 10);
+					b /= 10;
+				}
+				for (const char& j : as){
+					ans.push_back(j);
+				}
+				sta.push(1);
+				ans += "1.";
+				break;
+			}
+		}
+	}
+
+	return 0;
+}

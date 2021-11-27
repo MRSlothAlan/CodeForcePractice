@@ -1,0 +1,3 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1523a_game_of_life\source.cpp(75): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  1523A_game_of_life.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\1523A_game_of_life.exe

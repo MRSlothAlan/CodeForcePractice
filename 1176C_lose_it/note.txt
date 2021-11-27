@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define sz 100100
+int main()
+{
+	ios::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
+	int n; cin >> n;
+	vector<int>ar(n);
+	for (auto &it : ar)
+		cin >> it;
+	map<int, int>idx;
+	idx[4] = 1;
+	idx[8] = 2;
+	idx[15] = 3;
+	idx[16] = 4;
+	idx[23] = 5;
+	idx[42] = 6;
+	vector<int>cnt(7, 0);
+	cnt[0] = n;
+	int ans = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (cnt[idx[ar[i]] - 1])
+		{
+			cnt[idx[ar[i]] - 1]--;
+			cnt[idx[ar[i]]]++;
+		}
+	}
+	cout << n - (cnt[6] * 6);
+	return 0;
+}

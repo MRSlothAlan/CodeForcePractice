@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n;
+int a[100100];
+int s1[100100];
+int s2[100100];
+int minn=99999999;
+int main()
+{
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cin>>a[i];
+    }
+    for(int i=2; i<=n-1; i++)
+    {
+        if(a[i]>=0)
+            s2[i]=s2[i-1]+1;
+        else
+            s2[i]=s2[i-1];
+    }
+    for(int i=n-1;i>=2; i--)
+    {
+        if(a[i]<=0)
+            s1[i]=s1[i+1]+1;
+        else
+            s1[i]=s1[i+1];
+    }
+    for(int i=1; i<=n-1; i++)
+    {
+        if(s2[i]+s1[i+1]<minn)
+            minn=s2[i]+s1[i+1];
+    }
+    if(a[1]>=0)
+        minn++;
+    if(a[n]<=0)
+        minn++;
+    cout<<minn<<endl;
+    return 0;
+}

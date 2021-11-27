@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\202a_llps\source.cpp(46): warning C4244: 'initializing': conversion from 'lld' to 'uint16_t', possible loss of data
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\202a_llps\source.cpp(44): warning C4101: 'tmp': unreferenced local variable
+  202A_LLPS.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\202A_LLPS.exe

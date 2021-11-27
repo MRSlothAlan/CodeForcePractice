@@ -1,0 +1,3 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\665c_simple_string\source.cpp(4): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  665C_simple_string.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\665C_simple_string.exe

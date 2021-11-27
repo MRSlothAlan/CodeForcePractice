@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1537c_challenging_cliffs\source.cpp(7): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\1537c_challenging_cliffs\source.cpp(7): warning C4309: 'initializing': truncation of constant value
+  1537C_challenging_cliffs.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\1537C_challenging_cliffs.exe

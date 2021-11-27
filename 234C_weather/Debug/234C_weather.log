@@ -1,0 +1,3 @@
+﻿  Source.cpp
+c:\users\tingk\desktop\cityu\summer_2020_2021\codeforce2021\codeforce20210604\234c_weather\source.cpp(34): warning C4244: 'initializing': conversion from 'lld' to 'int', possible loss of data
+  234C_weather.vcxproj -> C:\Users\tingk\Desktop\CityU\Summer_2020_2021\CodeForce2021\CodeForce20210604\Debug\234C_weather.exe
